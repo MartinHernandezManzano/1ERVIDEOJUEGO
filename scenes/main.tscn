@@ -7,12 +7,12 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1584100678]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=696549523]
+position = Vector2(-287, -160)
+scale = Vector2(2.3360002, 2.083333)
+texture = ExtResource("2_sugp2")
+
 [node name="gatete" type="Sprite2D" parent="." unique_id=1436179832]
-position = Vector2(436, 213)
+position = Vector2(-271, -183)
 scale = Vector2(2.1096487, 2.3749998)
 texture = ExtResource("1_0wfyh")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=696549523]
-position = Vector2(227.75002, 156.00009)
-scale = Vector2(1.562, 1.86)
-texture = ExtResource("2_sugp2")
