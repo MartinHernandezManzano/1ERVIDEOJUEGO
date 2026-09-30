@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://c754km7wnokrt"]
 
+[ext_resource type="Texture2D" uid="uid://cc7s2ldpflbcr" path="res://assets/sprites/cat_5.png" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://c4clf26hn1mhy" path="res://assets/sprites/boxingring.png" id="2_epypp"]
+
 [node name="Node2D" type="Node2D" unique_id=1585478725]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2718428]
+
+[node name="gatete" type="Sprite2D" parent="." unique_id=1519188987]
+position = Vector2(-27, -302)
+texture = ExtResource("1_0e48y")
+
+[node name="ring" type="Sprite2D" parent="." unique_id=107854432]
+position = Vector2(-17, -406)
+texture = ExtResource("2_epypp")
