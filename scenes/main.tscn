@@ -1,18 +1,39 @@
 [gd_scene format=3 uid="uid://d0vbt28n74ck4"]
 
 [ext_resource type="Texture2D" uid="uid://cc7s2ldpflbcr" path="res://assets/sprites/cat_5.png" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://bm5r06bmlijc" path="res://scenes/skybox-space-galaxy.png" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://bvu617eoxhc7i" path="res://scripts/new_script.gd" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://c4clf26hn1mhy" path="res://assets/sprites/boxingring.png" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://bo3ghc0qwpe42" path="res://scenes/gatete.gd" id="4_jyhfs"]
 
 [node name="main_tscn" type="Node2D" unique_id=1961309448]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1584100678]
 
+[node name="SkyboxSpaceGalaxy" type="Sprite2D" parent="." unique_id=1798850775]
+position = Vector2(-235, -136)
+texture = ExtResource("1_tbgi4")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=696549523]
 position = Vector2(-287, -160)
 scale = Vector2(2.3360002, 2.083333)
 texture = ExtResource("2_sugp2")
+script = ExtResource("2_jyhfs")
 
 [node name="gatete" type="Sprite2D" parent="." unique_id=1436179832]
 position = Vector2(-271, -183)
 scale = Vector2(2.1096487, 2.3749998)
 texture = ExtResource("1_0wfyh")
+script = ExtResource("4_jyhfs")
+
+[node name="Timer" type="Timer" parent="gatete" unique_id=1680753896]
+autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=1322206097]
+offset_left = -560.0
+offset_top = -310.0
+offset_right = -400.0
+offset_bottom = -270.0
+text = "Toggle motion"
+
+[connection signal="pressed" from="Button" to="gatete" method="_on_button_pressed"]

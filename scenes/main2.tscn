@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c7l3i634pm6eu"]
+
+[ext_resource type="Texture2D" uid="uid://c4clf26hn1mhy" path="res://assets/sprites/boxingring.png" id="1_xdoxa"]
+[ext_resource type="Texture2D" uid="uid://b1ydodw6p2hvr" path="res://scenes/skybox-space-day.png" id="1_xlafv"]
+[ext_resource type="Script" uid="uid://bvu617eoxhc7i" path="res://scripts/new_script.gd" id="2_xlafv"]
+[ext_resource type="Texture2D" uid="uid://cc7s2ldpflbcr" path="res://assets/sprites/cat_5.png" id="3_kejo5"]
+[ext_resource type="Script" uid="uid://bo3ghc0qwpe42" path="res://scenes/gatete.gd" id="4_7tr0j"]
+
+[node name="main_tscn" type="Node2D" unique_id=1961309448]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1584100678]
+
+[node name="SkyboxSpaceDay" type="Sprite2D" parent="." unique_id=829919720]
+position = Vector2(687, -63)
+texture = ExtResource("1_xlafv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=696549523]
+position = Vector2(-278, -183)
+scale = Vector2(2.3360002, 2.083333)
+texture = ExtResource("1_xdoxa")
+script = ExtResource("2_xlafv")
+
+[node name="gatete" type="Sprite2D" parent="Sprite2D" unique_id=1436179832]
+position = Vector2(-107.87672, -120.96002)
+scale = Vector2(0.903103, 1.1400001)
+texture = ExtResource("3_kejo5")
+script = ExtResource("4_7tr0j")
+
+[node name="Timer" type="Timer" parent="Sprite2D/gatete" unique_id=1680753895]
+autostart = true
+
+[node name="Button" type="Button" parent="." unique_id=1322206096]
+offset_left = -560.0
+offset_top = -310.0
+offset_right = -400.0
+offset_bottom = -270.0
+text = "Toggle motion"
+
+[connection signal="pressed" from="Button" to="Sprite2D/gatete" method="_on_button_pressed"]
